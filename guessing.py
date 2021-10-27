@@ -7,7 +7,7 @@ tryAmount = 3
 game = 1;
 
 while (game <= tryAmount):
-    print("Tentativa ", game, " de ", tryAmount)
+    print("Tentativa {} de {}".format(game, tryAmount))
     guessStr = input("Digite um número: ")
     guess = int(guessStr)
 
