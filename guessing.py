@@ -9,9 +9,15 @@ guess = int(guess_str);
 
 print("Você digitou ", guess)
 
-if (secretValue == guess):
+gotItRight = guess == secretValue
+bigger = guess > secretValue
+smaller = guess < secretValue
+
+if (gotItRight):
     print("Você acertou")
 else:
-    print("Você errou")
-
+    if (bigger):
+        print("Você errou! Seu chute foi maior")
+    elif (smaller):
+        print("Você errou! Seu chute foi menor")
 print("Fim do jogo")
