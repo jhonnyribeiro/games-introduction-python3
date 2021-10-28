@@ -11,11 +11,11 @@ game = 1
 print("Níveis de dificuldade")
 print("(1) Fácil, (2) Médio, (3), Difícil")
 
-nivel = int(input("Digite seu nível: "))
+level = int(input("Digite seu nível: "))
 
-if (nivel == 1):
+if (level == 1):
     tryAmount = 20
-elif (nivel == 2):
+elif (level == 2):
     tryAmount = 10
 else:
     tryAmount = 5
