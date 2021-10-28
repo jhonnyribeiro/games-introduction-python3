@@ -4,9 +4,10 @@ print("###############################")
 print("######## Adivinhação ##########")
 print("###############################")
 
-secretValue = round(random.randrange(1, 101))
+secretValue = round(random.randrange(1, 36))
 tryAmount = 3
 game = 1
+score = 1000
 
 print("Níveis de dificuldade")
 print("(1) Fácil, (2) Médio, (3), Difícil")
@@ -36,12 +37,14 @@ for game in range(1, tryAmount + 1):
     smaller = guess < secretValue
 
     if (gotItRight):
-        print("Você acertou")
+        print("Você acertou e fez {} pontos".format(score))
         break
     else:
         if (bigger):
             print("Você errou! Seu chute foi maior")
         elif (smaller):
             print("Você errou! Seu chute foi menor")
+        score_lost = abs(secretValue - guess)
+        score = score - score_lost
 
 print("Fim do jogo")
