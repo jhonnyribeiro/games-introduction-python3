@@ -4,7 +4,7 @@ print("###############################")
 print("######## Adivinhação ##########")
 print("###############################")
 
-secretValue = round(random.random() * 35)
+secretValue = round(random.randrange(1, 101))
 tryAmount = 3
 game = 1
 
