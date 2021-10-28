@@ -8,6 +8,18 @@ secretValue = round(random.randrange(1, 101))
 tryAmount = 3
 game = 1
 
+print("Níveis de dificuldade")
+print("(1) Fácil, (2) Médio, (3), Difícil")
+
+nivel = int(input("Digite seu nível: "))
+
+if (nivel == 1):
+    tryAmount = 20
+elif (nivel == 2):
+    tryAmount = 10
+else:
+    tryAmount = 5
+
 for game in range(1, tryAmount + 1):
     print("Tentativa {} de {}".format(game, tryAmount))
     guessStr = input("Digite um número entre 0 e 35: ")
