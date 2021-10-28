@@ -1,19 +1,21 @@
+import random
+
 print("###############################")
 print("######## Adivinhação ##########")
 print("###############################")
 
-secretValue = 32
+secretValue = round(random.random() * 35)
 tryAmount = 3
 game = 1
 
-for game in range(1, tryAmount+1):
+for game in range(1, tryAmount + 1):
     print("Tentativa {} de {}".format(game, tryAmount))
     guessStr = input("Digite um número entre 0 e 35: ")
     guess = int(guessStr)
 
     print("Você digitou ", guess)
 
-    if(guess < 1 or guess > 35):
+    if (guess < 1 or guess > 35):
         print("O valor deve estar entre 0 e 35")
         continue
 
