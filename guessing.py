@@ -1,5 +1,6 @@
 import random
 
+
 def play_guessing():
     print("###############################")
     print("######## Adivinhação ##########")
@@ -49,3 +50,7 @@ def play_guessing():
             score = score - score_lost
 
     print("Fim do jogo")
+
+
+if (__name__ == "__main__"):
+    play_guessing()
